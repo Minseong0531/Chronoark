@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 function Universe(){
-    const enemy = [
+    const enemyItem = [
         {id:1, src:'/images/enemy/death.png', alt:'death'},
         {id:2, src:'/images/enemy/twin1.png', alt:'twin1'},
         {id:3, src:'/images/enemy/twin2.png', alt:'twin2'},
@@ -28,11 +28,23 @@ function Universe(){
         }
     }
 
-    return(
-        <section id="universe">
-            
+    return (
+        <section>
+          <h2>세계관</h2>
+          <motion.div
+            className="enemy-container"
+            variants={itemContainer}
+            initial="hidden"
+            animate="show"
+          >
+            {enemyItem.map((enemy, idx) => (
+              <motion.div key={idx} variants={item} className={enemy.alt} style={{position:'absolute'}}>
+                <img src={enemy.src} alt={enemy.alt}/>
+              </motion.div>
+            ))}
+          </motion.div>
         </section>
-    )
+      );
 }
 
 export default Universe;
