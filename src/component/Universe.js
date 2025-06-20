@@ -38,7 +38,7 @@ function Universe(){
             animate="show"
           >
             {enemyItem.map((enemy, idx) => (
-              <motion.div key={idx} variants={item} className={enemy.alt} style={{position:'absolute'}}>
+              <motion.div key={idx} variants={item} className={enemy.alt}>
                 <img src={enemy.src} alt={enemy.alt}/>
               </motion.div>
             ))}
