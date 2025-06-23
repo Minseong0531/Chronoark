@@ -1,0 +1,143 @@
+[
+    {
+        "id" : "1",
+        "name":"일리야",
+        "type":"/images/icon/attacker.wepb",
+        "stainding":"/images/Character/Ilya_icon_thumb.png",
+        "keyword": "서리, 납도",
+        "thumb":"/images/icon/Ilya_icon_thumb.png",
+        "color":"#7ECEFF",
+        "view":[
+            "/images/Character/Ilya.png",
+            "/images/Character/Ilya_thumb.png",
+            "ILYA"
+        ],
+        "description":[
+            "조사단의 정점에 있던 일리야는 과거 어떤 사건 이후로 과거 어떤 사건 이후 슬럼프에 빠져 자신감을 상실했습니다. ",
+            "그는 뛰어난 실력의 검사지만 스스로의 실력에 의구심을 품고 만사를 비관적으로 생각합니다.",
+            "일리야는 빠른 발도술을 구사하는 뇌명도, 서리를 부여하는 설월도, 두 자루의 도검을 사용하여 적을 제압합니다."
+        ],
+        "skill": [
+            "/images/skill/Ilya/Ilya_01.png",
+            "/images/skill/Ilya/Ilya_02.png",
+            "/images/skill/Ilya/Ilya_03.png",
+            "/images/skill/Ilya/Ilya_04.png",
+            "/images/skill/Ilya/Ilya_05.png",
+            "/images/skill/Ilya/Ilya_06.png"
+        ]
+    },
+    {
+        "id" : "2",
+        "name":"모모리",
+        "type":"/images/icon/tanker.wepb",
+        "keyword": "피해 저장, 도발 제어",
+        "thumb":"/images/icon/Momori_icon_thumb.png",
+        "color":"#7ECEFF",
+        "view":[
+            "/images/Character/Momori.png",
+            "/images/Character/Momori_thumb.png",
+            "MOMORI"
+        ],
+        "description":[
+            "뒷골목 출신 모모리는 화려하지만 어딘가 성격이 뒤틀린 소녀입니다.",
+            "모모리는 어렸을 때부터 리안의 밑에서 조사단원으로서 성장했으며, 리안의 간섭과 조사단의 규칙으로 인해 점차 반항심이 커져 결국 조사단을 그만두고 가출했습니다.",
+            "그렇게 혼자 방황하던 모모리는 예언의 소녀인 루시와 만난 후 얼떨결에 다시 뒤틀린 땅에 내려가게 되었습니다.",
+            "모모리는 적의 도발 상태를 컨트롤 할 수 있고 아군이 받은 피해의 일부를 저장하고 지연시킬 수 있습니다."
+
+        ],
+        "skil": [
+            "/images/skill/Momori/Momori_01.png",
+            "/images/skill/Momori/Momori_02.png",
+            "/images/skill/Momori/Momori_03.png",
+            "/images/skill/Momori/Momori_04.png",
+            "/images/skill/Momori/Momori_05.png",
+            "/images/skill/Momori/Momori_06.png"
+        ]
+    },
+    {
+        "id" : "3",
+        "name":"조이",
+        "type":"/images/icon/suporter.wepb",
+        "keyword": "중독, 지속 회복",
+        "thumb":"/images/icon/Joy_icon_thumb.png",
+        "color":"#7ECEFF",
+        "view":[
+            "/images/Character/Joy.png",
+            "/images/Character/Joy_thumb.png",
+            "JOY"
+        ],
+        "description":[
+            "뒷골목 출신 모모리는 화려하지만 어딘가 성격이 뒤틀린 소녀입니다.",
+            "모모리는 어렸을 때부터 리안의 밑에서 조사단원으로서 성장했으며, 리안의 간섭과 조사단의 규칙으로 인해 점차 반항심이 커져 결국 조사단을 그만두고 가출했습니다.",
+            "그렇게 혼자 방황하던 모모리는 예언의 소녀인 루시와 만난 후 얼떨결에 다시 뒤틀린 땅에 내려가게 되었습니다.",
+            "모모리는 적의 도발 상태를 컨트롤 할 수 있고 아군이 받은 피해의 일부를 저장하고 지연시킬 수 있습니다."
+
+        ],
+        "skill": [
+            "/images/skill/Joy/Joy_01.png",
+            "/images/skill/Joy/Joy_02.png",
+            "/images/skill/Joy/Joy_03.png",
+            "/images/skill/Joy/Joy_04.png",
+            "/images/skill/Joy/Joy_05.png",
+            "/images/skill/Joy/Joy_06.png"
+        ]
+    },
+    {
+        "id" : "4",
+        "name":"헬리아",
+        "type":"/images/icon/attacker.wepb",
+        "keyword": "태양 불꽃, 덱 컨트롤",
+        "thumb":"/images/icon/Helia_icon_thumb.png",
+        "color":"#7ECEFF",
+        "view":[
+            "/images/Character/Helia.png",
+            "/images/Character/Helia_thumb.png",
+            "HELIA"
+        ],
+        "description":[
+            "뒷골목 출신 모모리는 화려하지만 어딘가 성격이 뒤틀린 소녀입니다.",
+            "모모리는 어렸을 때부터 리안의 밑에서 조사단원으로서 성장했으며, 리안의 간섭과 조사단의 규칙으로 인해 점차 반항심이 커져 결국 조사단을 그만두고 가출했습니다.",
+            "그렇게 혼자 방황하던 모모리는 예언의 소녀인 루시와 만난 후 얼떨결에 다시 뒤틀린 땅에 내려가게 되었습니다.",
+            "모모리는 적의 도발 상태를 컨트롤 할 수 있고 아군이 받은 피해의 일부를 저장하고 지연시킬 수 있습니다."
+
+        ],
+        "skill": [
+            
+            "/images/skill/Helia/Helia_01.png",
+            "/images/skill/Helia/Helia_02.png",
+            "/images/skill/Helia/Helia_03.png",
+            "/images/skill/Helia/Helia_04.png",
+            "/images/skill/Helia/Helia_05.png",
+            "/images/skill/Helia/Helia_06.png"
+        ]
+    },
+    {
+        "id" : "5",
+        "name":"셀레나",
+        "type":"/images/icon/suporter.wepb",
+        "keyword": "달의 장막, 덱 컨트롤",
+        "thumb":"/images/icon/Selena_icon_thumb.png",
+        "color":"#7ECEFF",
+        "view":[
+            "/images/Character/Selena.png",
+            "/images/Character/Selena_thumb.png",
+            "SELENA"
+        ],
+        "description":[
+            "뒷골목 출신 모모리는 화려하지만 어딘가 성격이 뒤틀린 소녀입니다.",
+            "모모리는 어렸을 때부터 리안의 밑에서 조사단원으로서 성장했으며, 리안의 간섭과 조사단의 규칙으로 인해 점차 반항심이 커져 결국 조사단을 그만두고 가출했습니다.",
+            "그렇게 혼자 방황하던 모모리는 예언의 소녀인 루시와 만난 후 얼떨결에 다시 뒤틀린 땅에 내려가게 되었습니다.",
+            "모모리는 적의 도발 상태를 컨트롤 할 수 있고 아군이 받은 피해의 일부를 저장하고 지연시킬 수 있습니다."
+
+        ],
+        "skill": [
+            
+            "/images/skill/Selena/Selena_01.png",
+            "/images/skill/Selena/Selena_02.png",
+            "/images/skill/Selena/Selena_03.png",
+            "/images/skill/Selena/Selena_04.png",
+            "/images/skill/Selena/Selena_05.png",
+            "/images/skill/Selena/Selena_06.png"
+        ]
+    }
+]

@@ -1,9 +1,9 @@
 import React from "react"
 
-function ChractorCard(){
+function Introduction(){
     return(
         <></>
     )
 }
 
-export default ChractorCard
+export default Introduction
