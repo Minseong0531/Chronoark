@@ -23,9 +23,6 @@ function CharacterCard(){
         }
         fetchCharacter();
     },[])
-    console.log(characterData)
-    
-
     return(
         <section>
             <div className='title'>
@@ -49,20 +46,34 @@ function CharacterCard(){
                                 characterData.map((item)=>(
                                     <TabPanel key={item.id}>
                                         <div className='tab-item'>
-                                            {
-                                            
-                                            
-                                            }
-                                            <img src={(item.view) ? item.view[0] :""} style={{height:'466px', width:'auto'}}/>
-                                            <div className='label-wrap' style={{width:'350px', height:'50px', background:item.color}}>
-                                                <strong>{item.view[2]}</strong>
+                                            <div className='chr_view'>
+                                                <img src={(item.view) ? item.view[0] :""} style={{height:'466px', width:'auto'}}/>
+                                                <div className='bg'>
+                                                    <img src={item.view[1]} alt='캐릭터 배경 이미지' />
+                                                </div>
+                                                <div className='label-wrap' style={{width:'350px', height:'50px', background:item.color}}>
+                                                    <strong>{item.view[2]}</strong>
+                                                </div>
+                                            </div>
+                                            <div className='text-wrap'>
+                                                <div className='chr-title'>
+                                                    <h3>{item.name}</h3>
+                                                    <img src={item.type}/>
+                                                    <p>{item.keyword}</p>
+                                                </div>
+                                                <div className='chr-story'>
+                                                    {
+                                                        item.description.map((text,index)=>(
+                                                            <p key={index}>{text}</p>
+                                                        ))
+                                                    }
+                                                </div>
                                             </div>
                                         </div>
+                                        
                                     </TabPanel>
                                 ))
                             }
-                            
-                            
                         </Tabs>
             </div>
         </section>
