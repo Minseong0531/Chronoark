@@ -4,7 +4,7 @@ function Header(){
     return(
         <header id="main_header">
             <div className='inner_container'>
-                <h1><Link to="/"><img src='/images/Logo/Alfine_Logo_White_m.png'></img></Link></h1>
+                <h1><Link to="/"><img src='/images/Logo/Alfine_Logo_White.png'></img></Link></h1>
                 <nav className='main_navbar'>
                     <ul>
                         <li><Link to="/main">메인</Link></li>

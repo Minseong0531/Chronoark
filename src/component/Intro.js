@@ -17,18 +17,18 @@ function Intro(){
                     <div className="first-item">
                         <img src="/images/contents/Officail_release.png" />
                     </div>
+                    <div className="dlc-item">
+                        {
+                            dlcItem.map((item, idx)=>(
+                                <img src={item.src} alt={item.alt} key={idx} style={{width:`${100/dlcItem.length}%`}}/>
+                            ))
+                        }
+                    </div>
                     <ul className="second-item">
                         <li><Link to="">Steam</Link></li>
                         <li><Link to="">Nintendo</Link></li>
                         <li><Link to="">Stove</Link></li>
                     </ul>
-                    <div className="dlc-item">
-                        {
-                            dlcItem.map((item, idx)=>(
-                                <img src={item.src} alt={item.alt} key={idx}/>
-                            ))
-                        }
-                    </div>
                 </div>
             </section>
     )
