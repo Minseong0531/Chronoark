@@ -1,37 +1,94 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import PlayCircle from "@mui/icons-material/PlayCircle";
+import PauseCircle from "@mui/icons-material/PauseCircle";
+import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+import SkipNext from "@mui/icons-material/SkipNext";
+import axios from 'axios';
 
 function SoundTrack(){
+
+    const [audioData, setAudioData] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    useEffect(()=>{
+        const fetchAudio = async () => {
+            const audioJson = '/json/audio.json';
+            try{
+                const response = await fetch(audioJson);
+                const data = await response.json();
+                setAudioData(data);
+            } catch(error) {
+                alert("에러", error)
+            }
+        }
+        fetchAudio();
+    },[]);
+
+    const goToPrev = () => {
+        const audio = audioRef.current;
+        audio.pause();
+        setIsPlaying(false);        
+        setCurrentIndex(prevIndex => {
+            const newIndex = prevIndex > 0 ? prevIndex - 1 : audioData.length - 1;
+            return newIndex;
+        });
+    }
+
+    const goToNext = () => {
+        const audio = audioRef.current;
+        audio.pause();
+        setIsPlaying(false);
+        setCurrentIndex(prevIndex => {
+            const newIndex = prevIndex < audioData.length - 1 ? prevIndex + 1 : 0;
+            return newIndex;
+        });
+    }
+
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    
     const togglePlay = () =>{
         const audio = audioRef.current;
         if( audio.paused){
             audio.play();
             setIsPlaying(true);
         }else{
-            audio.play();
+            audio.pause();
             setIsPlaying(false);
         }
     }
+
+    const currentTrack = audioData[currentIndex];
     return(
-        <section style={{position:'relative'}}>
-            <div className="title" style={{position:'absolute', top:'100px', left:'50%', transform:'translateX(-50%)'}} >
+        <section className="sound-content">
+            <div className="title">
                 <h2>사운드 트랙</h2>
                 <p>트랙 제목</p>
             </div>
             
-            <div className="track-wrap" style={{position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)'}}>
+            <div className="track-wrap">
                 <div className="inner">
                     <div className="play-wrap">
                         <div className="current-track">
-                            <div className="play-bg" style={{height:'300px', width:'300px'}}>
-                                <img src="/images/contents/lp_red.png" alt="void" className={isPlaying ? 'spin' : 'paused'}/>
-                                <audio ref={audioRef} src='/'></audio>
-                                <button onClick={togglePlay}>
-                                    {isPlaying ? 'Pause Music' : 'Play Music'}
-                                </button>
+                            <div className={`track-list`}>
+                                {currentTrack && (
+                                    <div className="track-active">
+                                            <img 
+                                                src={currentTrack.lp} 
+                                                className={isPlaying ? 'spin' : 'paused'}
+                                                alt={`Track ${currentIndex + 1}`}
+                                            />
+                                            <audio ref={audioRef} src={currentTrack.src}></audio>
+                                            <span className="ep"></span>
+                                        </div>
+                                )}
                             </div>
-                            <img src="/images/contents/track3.png" alt="place of void" style={{position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)'}} />
+                        </div>
+                        <div className="btn-wrap">
+                            <button onClick={goToPrev}><SkipPreviousIcon /></button>
+                            <button onClick={togglePlay}>
+                                {isPlaying ? <PauseCircle style={{ fontSize: '50px'}}/> : <PlayCircle style={{ fontSize: '50px'}}/>}
+                            </button>
+                            <button onClick={goToNext}><SkipNext /></button>
                         </div>
                     </div>
                 </div>

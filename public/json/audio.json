@@ -1,0 +1,35 @@
+[
+    {
+        "name":"Alone",
+        "lp":"/images/contents/lp_red.png",
+        "audio":"Alone",
+        "img":"album1",
+        "total":"04:05",
+        "src":"/songs/Alone.mp3"
+    },
+     {
+        "name":"Mahidevran",
+        "lp":"/images/contents/lp_pink.png",
+        "audio":"Mahidevran-Maze_of_sorrow",
+        "img":"album2",
+        "total":"06:28",
+        "src":"/songs/Mahidevran-Maze_of_sorrow.mp3"
+     },
+     {
+        "name":"No Rest Or Endless Rest",
+        "lp":"/images/contents/lp_sky.png",
+        "audio":"No_Rest_Or_Endless_Rest",
+        "img":"album3",
+        "total":"04:33",
+        "src":"/songs/No_Rest_Or_Endless_Rest.mp3"
+    },
+     {
+        "name":"Old Melody",
+        "lp":"/images/contents/lp_gray.png",
+        "audio":"Old_Money",
+        "img":"album4",
+        "total":"04:01",
+        "src":"/songs/Old_Money.mp3"
+    }
+    
+  ]
