@@ -3,7 +3,6 @@ import {Tabs, Tab, TabList, TabPanel} from 'react-tabs';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Navigation, Pagination } from 'swiper/modules';
-import 'react-tabs/style/react-tabs.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -30,7 +29,7 @@ function CharacterCard(){
                     <h2>캐릭터 소개</h2>
                 </div>
                             <Tabs className="chr_wrap">
-                                <TabList className="tabs">
+                                <TabList className="tabs" style={{display:"flex"}}>
                                 {
                                     characterData && characterData.length > 0 && (
                                     characterData.map((item)=>(

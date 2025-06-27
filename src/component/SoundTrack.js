@@ -4,6 +4,7 @@ import PauseCircle from "@mui/icons-material/PauseCircle";
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import SkipNext from "@mui/icons-material/SkipNext";
 import axios from 'axios';
+import { progress } from "framer-motion";
 
 function SoundTrack(){
 
@@ -46,6 +47,7 @@ function SoundTrack(){
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     
+
     const togglePlay = () =>{
         const audio = audioRef.current;
         if( audio.paused){
@@ -57,32 +59,98 @@ function SoundTrack(){
         }
     }
 
+    const progressRef = useRef(null);
+
+    
+
+    useEffect(() => {
+        const audio = audioRef.current;
+        const circle = progressRef.current;
+        const radius = 90;
+        const circumference = 2 * Math.PI * radius;
+        
+        console.log(circle, audio);
+        if (circle) {
+            circle.style.strokeDasharray = `${circumference}`;
+            circle.style.strokeDashoffset = `${circumference}`;
+        }
+
+        const updateProgress = () => {
+            const progress = audio.currentTime / audio.duration;
+            const offset = circumference - progress * circumference;
+            circle.style.strokeDashoffset = offset;
+        };
+
+        audio?.addEventListener('timeupdate', updateProgress);
+        return () => {
+            audio?.removeEventListener('timeupdate', updateProgress);
+        };
+    }, [currentIndex]);
+
     const currentTrack = audioData[currentIndex];
     return(
-        <section className="sound-content">
-            <div className="title">
-                <h2>사운드 트랙</h2>
-                <p>트랙 제목</p>
-            </div>
-            
-            <div className="track-wrap">
-                <div className="inner">
+        <section id="sound-content">
+            <div className="track-wrap"
+                 style={{
+                    backgroundImage: currentTrack ? `url(${currentTrack.bg})` : "none",
+                    backgroundSize : 'cover',
+                    backgroundPosition :'center',
+                    backgroundRepeat: 'no-repeat'
+                 }}>
+                    <div className="title">
+                        <h2>사운드 트랙</h2>
+                        <span>{currentTrack ? currentTrack.name : ''}</span>
+                    </div>
+
                     <div className="play-wrap">
-                        <div className="current-track">
                             <div className={`track-list`}>
                                 {currentTrack && (
                                     <div className="track-active">
+                                        <div className="img-wrap">
                                             <img 
                                                 src={currentTrack.lp} 
                                                 className={isPlaying ? 'spin' : 'paused'}
                                                 alt={`Track ${currentIndex + 1}`}
                                             />
+                                        </div>
                                             <audio ref={audioRef} src={currentTrack.src}></audio>
-                                            <span className="ep"></span>
+                                            <div className="ep-progress">
+                                            <svg width="184" height="184">
+                                                <circle
+                                                className="progress-bg"
+                                                cx="92"
+                                                cy="92"
+                                                r="90"
+                                                stroke="#ffffff"
+                                                strokeWidth="4"
+                                                fill="none"
+                                                opacity='0.4'
+                                                />
+                                                <circle
+                                                ref={progressRef}
+                                                className="progress-ring"
+                                                cx="92"
+                                                cy="92"
+                                                r="90"
+                                                stroke="#FFA500"
+                                                strokeWidth="4"
+                                                fill="none"
+                                                strokeLinecap="round"
+                                                />
+                                            </svg>
+                                            <span
+                                                className="ep"
+                                                style={{
+                                                backgroundImage: currentTrack ? `url(${currentTrack.ep})` : "none",
+                                                backgroundSize: "cover",
+                                                backgroundPosition: "center",
+                                                backgroundRepeat: "no-repeat"
+                                                }}
+                                            ></span>
+                                            </div>
                                         </div>
                                 )}
                             </div>
-                        </div>
                         <div className="btn-wrap">
                             <button onClick={goToPrev}><SkipPreviousIcon /></button>
                             <button onClick={togglePlay}>
@@ -92,10 +160,6 @@ function SoundTrack(){
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-wrap">
-                <img src="/images/map/ost_bg.png" alt="ost 배경"/>
-            </div>
         </section>
     )
 }

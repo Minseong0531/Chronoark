@@ -27,7 +27,6 @@ section{background: #1E293B; width: 100vw;}
 #intro > .intro-contents > .dlc-item{display: flex;}
 #intro > .intro-contents > .second-item{display: flex; flex: 1 1 0; gap: 10px; padding: 10px 0px;}
 #intro > .intro-contents > .second-item > li {width: 100px; height: 100px; background: #000;}
-#intro > .intro-contents > .second-item > li > a{}
 
 
 #universe > .enemy-container {margin-top: 50px; height: 360px;}
@@ -69,21 +68,38 @@ section{background: #1E293B; width: 100vw;}
 #character-card .chr_wrap .label-wrap > strong{font-size: 2.75rem; float: right; margin-right: 10px; color: #fff; position: relative; z-index: 5;}
 
 
+#sound-content > .track-wrap{  width: 100vw; height: 100vh;}
+#sound-content >.track-wrap::before {  content: '';  position: absolute;  background: rgba(0, 0, 0, 0.4);z-index: 0; width: 100%; height: 100%;}
+#sound-content >.track-wrap .play-wrap {  position: relative;  z-index: 1;}
 
-.sound-content > .track-wrap .btn-wrap{
-  position: absolute; left: 50%; top: 50%; z-index: 11; transform: translate(-50%,-50%); color:#E2E8F0; opacity: 0.7;
+#sound-content > .track-wrap > .title{padding-top: 120px; position: relative; z-index: 1;}
+
+#sound-content > .track-wrap .btn-wrap{
+  position: absolute; left: 50%; top: 50%; z-index: 11; transform: translate(-50%,-50%); color:#E2E8F0; opacity: 0.5;
   display: flex; align-items: center; gap: 20px;
 }
 
-.track-active{position: relative; width: 360px; height: 360px; margin: 0 auto;}
-.track-active img{position: absolute; margin: 0px 30px auto; z-index: 3; position: relative;}
 
-.play-wrap{position: relative;}
-.btn-wrap{position: absolute;}
-.ep{
-  position: relative;
-  width: 180px; height: 180px; background: url('/public/images/contents/place_of_void.png') no-repeat center center;
-}
+
+#sound-content .track-active {  position: relative;  width: 360px;  height: 360px;  margin: 0 auto;}
+
+#sound-content .track-active .img-wrap{width: 250px; height: 250px;}
+#sound-content .track-active .img-wrap,
+#sound-content .track-active .ep {  position: absolute;  top: 50%;  left: 50%;  transform: translate(-50%, -50%);}
+
+#sound-content .track-active img {  width: 250px;  height: 250px; z-index: 1;}
+
+#sound-content .track-active .ep {  width: 180px;  height: 180px; z-index: 2;}
+
+
+.ep-progress {  position: absolute;  top: 50%;  left: 50%;  width: 180px;  height: 180px;  transform: translate(-50%, -50%);  z-index: 5;}
+
+.ep-progress svg {  position: absolute;  top: 0;  left: 0;  transform: rotate(-90deg); z-index: 15;}
+
+.ep-progress .ep {  width: 60px;  height: 60px;  position: relative;  display: block; z-index: 2;  border-radius: 50%;}
+
+.progress-ring {  transition: stroke-dashoffset 0.3s linear;}
+
 
   .spin{
     animation: spin 15s linear infinite; animation-play-state: running;
