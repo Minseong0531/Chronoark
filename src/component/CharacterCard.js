@@ -48,9 +48,11 @@ function CharacterCard(){
                                         <TabPanel key={item.id}>
                                             <div className='tab-item'>
                                                 <div className='chr_view'>
-                                                    <img src={(item.view) ? item.view[0] :""} style={{height:'466px', width:'auto'}}/>
+                                                    <div className='img-wrap'>
+                                                        <img src={(item.view) ? item.view[0] :""} alt='캐릭터 이미지' className={item.view[2]}/>
+                                                    </div>
                                                     <div className='bg'>
-                                                        <img src={item.view[1]} alt='캐릭터 배경 이미지' />
+                                                        <img src={item.view[1]} alt='캐릭터 배경 이미지'/>
                                                     </div>
                                                     <div className='label-wrap' style={{background:item.color}}>
                                                         <strong>{item.view[2]}</strong>

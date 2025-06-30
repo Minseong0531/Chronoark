@@ -20,7 +20,7 @@ function Intro(){
                     <div className="dlc-item">
                         {
                             dlcItem.map((item, idx)=>(
-                                <img src={item.src} alt={item.alt} key={idx} style={{width:`${100/dlcItem.length}%`}}/>
+                                <img src={item.src} alt={item.alt} key={idx}/>
                             ))
                         }
                     </div>

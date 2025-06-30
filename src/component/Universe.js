@@ -34,6 +34,9 @@ function Universe(){
           <div className="title">
             <h2>세계관</h2>
           </div>
+          <div className="contents-wrap">
+
+          
           <motion.div
             className="enemy-container"
             style={{position:'relative', display:'flex', flex:'1 1 0'}}
@@ -55,7 +58,7 @@ function Universe(){
             <p>
             안개에서 튀어나오는 모든 것이  <br />
             사람들을 공격하기 시작하여  <br />
-            더 이상 사람이 살 수 없게 되었다. z
+            더 이상 사람이 살 수 없게 되었다.
             </p>
             <p>
             이 세계에서 유일하게 안전한 곳은  <br />
@@ -70,7 +73,7 @@ function Universe(){
             알 수 없는 기억만 남은 채...
             </p>
           </div>
-
+        </div>
         </section>
       );
 }

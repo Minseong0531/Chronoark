@@ -5,7 +5,7 @@ function MainBanner(){
     return(
         <div className="main_banner">
                 <div className="banner_wrap">
-                    <img src='/images/Logo/Main_banner_m.png' />
+                    <img src='/images/Contents/main_banner.png' />
                 
                 <div className="banner_icons">
                     <ul>
