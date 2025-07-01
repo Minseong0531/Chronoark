@@ -1,10 +1,11 @@
+
 img{  display:block;  }
 
 a{  text-decoration:none;   }
 
 ul{  list-style:none;  margin:0;  padding:0;  }
 
-section{background: #1E293B; width: 100vw;}
+section{background: #1E293B; width: 100vw; padding-top: 100px;}
 .title{ text-align: center; padding: 25px 0px;}
 .title > h2 {color:#E2E8F0; font-size: 2rem; font-weight: 700; line-height: 1.5rem; margin-bottom: 8px;}
 .title > span{color:#CBD5E1; font-size: 1.5rem;}
@@ -50,7 +51,7 @@ section{background: #1E293B; width: 100vw;}
 .death{width: 100%; top: -50px}
 .death>img{width: 100%; max-height: 100% !important; max-width: 100% !important; margin: 0 auto;} 
 
-#character-card{max-height: 760px;}
+#character-card{max-height: 760px; position: relative;}
 #character-card > .chr_wrap {position: relative; width: 100vw;}
 #black-bg {position:absolute; width: 100vw; height: 100vh; background: #000; opacity: 0.5; z-index: 2;}
 
@@ -62,11 +63,18 @@ section{background: #1E293B; width: 100vw;}
 #character-card .chr_wrap .tab-item{position: relative; height: 594px;}
 #character-card .chr_wrap .tabs{  overflow: hidden;  max-height: 84px; position: relative; z-index: 10;}
 #character-card .chr_wrap .chr_view{position: relative;}
-#character-card .chr_wrap .chr_view>img{margin:0 30px auto; position: relative; z-index: 100; top: 40px;}
+#character-card .chr_wrap .chr_view > .img-wrap{position: relative; width: 50%; height: 100%; min-width: 300px; max-height: 500px; z-index: 100; left: 30%; transform: translateX(-50%); overflow: hidden;}
+#character-card .chr_wrap .chr_view > .img-wrap > img{position: relative; z-index: 100; top: 40px;}
 #character-card .chr_wrap .bg{position: absolute; top: 0; z-index: 3;}
-#character-card .chr_wrap .label-wrap{position: absolute; top: 75px; height: 60px; width: 90%; line-height: 60px;}
-#character-card .chr_wrap .label-wrap > strong{font-size: 2.75rem; float: right; margin-right: 10px; color: #fff; position: relative; z-index: 5;}
+#character-card .chr_wrap .label-wrap{position: absolute; top: 20px; height: 60px; width: 100%; line-height: 60px;}
+#character-card .chr_wrap .label-wrap > strong{font-size: 2.25rem; float: right; margin-right: 10px; color: #fff; position: relative; z-index: 5;}
+#character-card .text-wrap .skill{display: none;}
 
+    .mySwiper{width: 100%!important;}
+    #introduction .text-wrap{width: 90%;}
+    #introduction .bg-wrap{max-height: 760px}
+    #introduction strong{font-size: 1.5rem !important;}
+    #introduction p{font-size: 1rem !important; width: 100%;}
 
 #sound-content > .track-wrap{  width: 100vw; height: 100vh;}
 #sound-content >.track-wrap::before {  content: '';  position: absolute;  background: rgba(0, 0, 0, 0.4);z-index: 0; width: 100%; height: 100%;}
@@ -115,7 +123,7 @@ section{background: #1E293B; width: 100vw;}
 
   @media (min-width:769px ) {
     body{overflow-x: hidden;}
-    .title{ text-align: center; padding-top: 150px;}
+    .title{ text-align: center;}
 
 
     #main_header{  width:100%;  height:60px; line-height: 0px;}
@@ -158,17 +166,19 @@ section{background: #1E293B; width: 100vw;}
     .death{width: 100%; top: -160px}
     .death>img{width: 60%; max-height: 50% !important; max-width: 100% !important; margin: 0 auto;} 
 
-    #character-card{max-height: 100vh; overflow: hidden;}
+    #character-card{max-height: 100vh; overflow: hidden; position: relative;}
     #character-card > .title{padding: 50px 0;}
     #character-card .chr_wrap{display: flex; align-content: center; height: 760px;}
-    #character-card .chr_wrap .tab-item{display: flex;   height: 100%; margin: 0 auto; position: static;}
-    #character-card .chr_wrap .tab-item > .chr_view {position: relative; width: 60%;}
-    #character-card .chr_wrap .tab-item > .text-wrap {position: static; width: 30%;}
+    #character-card .chr_wrap .tab-item{display: flex;  height: 100%; margin: 0 auto; position: static;}
+    #character-card .chr_wrap .tab-item > .chr_view {position: relative; width: 50%;}
+    #character-card .chr_wrap .tab-item > .text-wrap {position: static; width: 40%;}
     
-    #character-card .chr_wrap .text-wrap{background: none;}
+    #character-card .chr_wrap .text-wrap{background: none; height: auto; display: flex; flex-flow: column; gap: 30px;}
     #character-card .chr_wrap .text-wrap > div > p{font-size: 1.25rem;}
+    #character-card .chr_wrap .text-wrap > .skill{display: flex; flex-flow: row wrap; gap: 5px;}
+    #character-card .chr_wrap .text-wrap > .skill > img{width: 30%;}
     
-    #character-card .chr_wrap .tabs{ gap: 40px; max-height: none; position: static; flex-direction: column; order: 3; width: 10%; height: 100%;}
+    #character-card .chr_wrap .tabs{ gap: 40px; max-height: none; position: static; flex-direction: column; align-items: center; order: 3; width: 10%; height: 100%;}
     #character-card .chr_wrap .tabs > li > img{scale: 1.25;}
     #character-card .chr_wrap .react-tabs__tab-panel--selected{width: 90%;}
 
@@ -177,8 +187,9 @@ section{background: #1E293B; width: 100vw;}
     #character-card .chr_wrap .bg{position: absolute; top: 0; left: 0px; width: 500px;}
     #character-card .chr_wrap .bg>img{width: 100%;}
     #character-card .chr_wrap .label-wrap{height: 120px; line-height: 120px; width: 80%; top: 35px;}
-/* 
-    #character-card .chr_wrap .label-wrap{position: absolute; top: 75px; height: 60px; width: 90%; line-height: 60px;}
-    #character-card .chr_wrap .label-wrap > strong{font-size: 2.75rem; float: right; margin-right: 10px; color: #fff; position: relative; z-index: 5;}
-*/
+
+    #introductuon{width: 100vw; height: 100vh;}
+
+    #sound-content .track-active{scale: 1.5; margin-top: 5%;}
+
   }

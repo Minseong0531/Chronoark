@@ -72,6 +72,13 @@ function CharacterCard(){
                                                             ))
                                                         }
                                                     </div>
+                                                    <div className='skill'>
+                                                        {
+                                                            item.skill.map((skill, index)=>(
+                                                                <img key={index} src={skill}></img>
+                                                            ))
+                                                        }
+                                                    </div>
                                                 </div>
                                             </div>
                                             
