@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Chronoark/static/css/main.e89f8084.css",
-    "main.js": "/Chronoark/static/js/main.9e94d170.js",
+    "main.js": "/Chronoark/static/js/main.d7133b0e.js",
     "static/js/453.c4b96b94.chunk.js": "/Chronoark/static/js/453.c4b96b94.chunk.js",
     "index.html": "/Chronoark/index.html",
     "main.e89f8084.css.map": "/Chronoark/static/css/main.e89f8084.css.map",
-    "main.9e94d170.js.map": "/Chronoark/static/js/main.9e94d170.js.map",
+    "main.d7133b0e.js.map": "/Chronoark/static/js/main.d7133b0e.js.map",
     "453.c4b96b94.chunk.js.map": "/Chronoark/static/js/453.c4b96b94.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e89f8084.css",
-    "static/js/main.9e94d170.js"
+    "static/js/main.d7133b0e.js"
   ]
 }
