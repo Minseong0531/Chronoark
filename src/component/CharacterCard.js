@@ -2,7 +2,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import {Tabs, Tab, TabList, TabPanel} from 'react-tabs';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Navigation, Pagination } from 'swiper/modules';
+import { fixPath } from "../utils/PathUtils";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -12,7 +12,7 @@ function CharacterCard(){
     
     useEffect(()=>{
         const fetchCharacter = async () => {
-            const characterJson = '/json/character.json';
+            const characterJson = `${process.env.PUBLIC_URL}/json/character.json`;
             try{
                 const response = await axios.get(characterJson);
                 setCharacterData(response.data);
@@ -22,74 +22,81 @@ function CharacterCard(){
         }
         fetchCharacter();
     },[])
+
+    // 경로 앞에 PUBLIC_URL 붙이는 함수
+    const fixPath = (path) => {
+        if(!path) return "";
+        // 이미 https:// 로 시작하는 외부 URL인 경우는 그대로 리턴
+        if(path.startsWith('http')) return path;
+        // 없으면 / 붙여서 PUBLIC_URL 붙임
+        return `${process.env.PUBLIC_URL}/${path.replace(/^\/+/, '')}`;
+    }
+
     return(
         <section id='character-card'>
             <div id='black-bg'></div>
-                <div className='title'>
-                    <h2>캐릭터 소개</h2>
-                </div>
-                            <Tabs className="chr_wrap">
-                                <TabList className="tabs" style={{display:"flex"}}>
-                                {
-                                    characterData && characterData.length > 0 && (
-                                    characterData.map((item)=>(
-                                        <Tab key={item.id}>
-                                        <img 
-                                            src={item.thumb}
-                                            alt={`${item.name} 아이콘`}
-                                            />
-                                        </Tab>
-                                    ))
-                                )
-                                }
-                                </TabList>
-                                {
-                                    characterData.map((item)=>(
-                                        <TabPanel key={item.id}>
-                                            <div className='tab-item'>
-                                                <div className='chr_view'>
-                                                    <div className='img-wrap'>
-                                                        <img src={(item.view) ? item.view[0] :""} alt='캐릭터 이미지' className={item.view[2]}/>
-                                                    </div>
-                                                    <div className='bg'>
-                                                        <img src={item.view[1]} alt='캐릭터 배경 이미지'/>
-                                                    </div>
-                                                    <div className='label-wrap' style={{background:item.color}}>
-                                                        <strong>{item.view[2]}</strong>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div className='text-wrap'>
-                                                    <div className='chr-title'>
-                                                        <h3>{item.name}</h3>
-                                                        <img src={item.type}/>
-                                                        <p>{item.keyword}</p>
-                                                    </div>
-                                                    <div className='chr-story'>
-                                                        {
-                                                            item.description.map((text,index)=>(
-                                                                <p key={index}>{text}</p>
-                                                            ))
-                                                        }
-                                                    </div>
-                                                    <div className='skill'>
-                                                        {
-                                                            item.skill.map((skill, index)=>(
-                                                                <img key={index} src={skill}></img>
-                                                            ))
-                                                        }
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </TabPanel>
-                                    ))
-                                }
-                            </Tabs>
+            <div className='title'>
+                <h2>캐릭터 소개</h2>
+            </div>
+            <Tabs className="chr_wrap">
+                <TabList className="tabs" style={{display:"flex"}}>
+                    {
+                        characterData && characterData.length > 0 && (
+                        characterData.map((item)=>(
+                            <Tab key={item.id}>
+                                <img 
+                                    src={fixPath(item.thumb)}
+                                    alt={`${item.name} 아이콘`}
+                                />
+                            </Tab>
+                        ))
+                    )
+                    }
+                </TabList>
+                {
+                    characterData.map((item)=>(
+                        <TabPanel key={item.id}>
+                            <div className='tab-item'>
+                                <div className='chr_view'>
+                                    <div className='img-wrap'>
+                                        <img src={fixPath(item.view ? item.view[0] : "")} alt='캐릭터 이미지' className={item.view ? item.view[2] : ''}/>
+                                    </div>
+                                    <div className='bg'>
+                                        <img src={fixPath(item.view ? item.view[1] : "")} alt='캐릭터 배경 이미지'/>
+                                    </div>
+                                    <div className='label-wrap' style={{background:item.color}}>
+                                        <strong>{item.view ? item.view[2] : ''}</strong>
+                                    </div>
+                                </div>
+                                
+                                <div className='text-wrap'>
+                                    <div className='chr-title'>
+                                        <h3>{item.name}</h3>
+                                        <img src={fixPath(item.type)} alt={`${item.name} 타입 아이콘`}/>
+                                        <p>{item.keyword}</p>
+                                    </div>
+                                    <div className='chr-story'>
+                                        {
+                                            item.description.map((text,index)=>(
+                                                <p key={index}>{text}</p>
+                                            ))
+                                        }
+                                    </div>
+                                    <div className='skill'>
+                                        {
+                                            item.skill.map((skill, index)=>(
+                                                <img key={index} src={fixPath(skill)} alt={`${item.name} 스킬 ${index + 1}`} />
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </TabPanel>
+                    ))
+                }
+            </Tabs>
         </section>
     )
 }
 
-export default CharacterCard
-
-
+export default CharacterCard;

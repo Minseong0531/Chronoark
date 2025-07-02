@@ -1,37 +1,37 @@
 [
     {
         "name":"Alone",
-        "lp":"/images/contents/lp_red.png",
+        "lp":"images/contents/lp_red.png",
         "audio":"Alone",
-        "ep":"/images/contents/ep1.png",
+        "ep":"images/contents/ep1.png",
         "total":"04:05",
-        "src":"/songs/Alone.mp3",
-        "bg": "/images/map/park.png"
+        "src":"songs/Alone.mp3",
+        "bg": "images/map/park.png"
     },
      {
         "name":"Mahidevran",
-        "lp":"/images/contents/lp_pink.png",
+        "lp":"images/contents/lp_pink.png",
         "audio":"Mahidevran-Maze_of_sorrow",
-        "ep":"/images/contents/ep2.png",
+        "ep":"images/contents/ep2.png",
         "total":"06:28",
-        "src":"/songs/Mahidevran-Maze_of_sorrow.mp3",
-        "bg": "/images/map/ost_bg.png"
+        "src":"songs/Mahidevran-Maze_of_sorrow.mp3",
+        "bg": "images/map/ost_bg.png"
      },
      {
         "name":"No Rest Or Endless Rest",
-        "lp":"/images/contents/lp_sky.png",
+        "lp":"images/contents/lp_sky.png",
         "audio":"No_Rest_Or_Endless_Rest",
-        "ep":"/images/contents/ep2.png",
+        "ep":"images/contents/ep2.png",
         "total":"04:33",
-        "src":"/songs/No_Rest_Or_Endless_Rest.mp3"
+        "src":"songs/No_Rest_Or_Endless_Rest.mp3"
     },
      {
         "name":"Old Melody",
-        "lp":"/images/contents/lp_gray.png",
+        "lp":"images/contents/lp_gray.png",
         "audio":"Old_Money",
-        "ep":"/images/contents/ep2.png",
+        "ep":"images/contents/ep2.png",
         "total":"04:01",
-        "src":"/songs/Old_Money.mp3"
+        "src":"songs/Old_Money.mp3"
     }
     
   ]

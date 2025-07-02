@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-
+import { fixPath } from "../utils/PathUtils";
 function Universe(){
     const enemyItem = [
 
-        {id:6, src:'/images/enemy/witch.png', alt:'witch'},
-        {id:5, src:'/images/enemy/dulahan.png', alt:'dulahan'},
-        {id:4, src:'/images/enemy/joker.png', alt:'joker'},
-        {id:3, src:'/images/enemy/twin2.png', alt:'twin2'},
-        {id:2, src:'/images/enemy/twin1.png', alt:'twin1'},
-        {id:1, src:'/images/enemy/death.png', alt:'death'},
+        {id:6, src:'images/enemy/witch.png', alt:'witch'},
+        {id:5, src:'images/enemy/dulahan.png', alt:'dulahan'},
+        {id:4, src:'images/enemy/joker.png', alt:'joker'},
+        {id:3, src:'images/enemy/twin2.png', alt:'twin2'},
+        {id:2, src:'images/enemy/twin1.png', alt:'twin1'},
+        {id:1, src:'images/enemy/death.png', alt:'death'},
     ]
     const itemContainer = {
         hidden: { opacity: 0 },

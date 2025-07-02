@@ -3,14 +3,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import "swiper/css";
 import { EffectFade, Pagination } from 'swiper/modules';
-
+import { fixPath } from "../utils/PathUtils";
 function Introduction(){
 
     const slideContent = [
-        {id:"1", src:"/images/contents/Poster1.png", alt:'슬라이드1 배경', title:'게임소개', subtitle:'세계를 복구 시키기 위한 여정', text:'덱 빌딩, 로그라이크 RPG 크로노아크 동료들과 파티를 꾸려 뒤틀린 세계를 구하세요.'},
-        {id:"2", src:"/images/contents/Poster2.jpg", alt:'슬라이드1 배경', title:'게임소개2', subtitle:'세계를 복구 시키기 위한 여정',  text:'덱 빌딩, 로그라이크 RPG 크로노아크 동료들과 파티를 꾸려 뒤틀린 세계를 구하세요.'},
-        {id:"3", src:"/images/contents/Poster3.png", alt:'슬라이드1 배경', title:'게임소개3', subtitle:'세계를 복구 시키기 위한 여정',  text:'덱 빌딩, 로그라이크 RPG 크로노아크 동료들과 파티를 꾸려 뒤틀린 세계를 구하세요.'},
-        {id:"4", src:"/images/contents/Poster4.jpg", alt:'슬라이드1 배경', title:'게임소개4', subtitle:'세계를 복구 시키기 위한 여정',  text:'덱 빌딩, 로그라이크 RPG 크로노아크 동료들과 파티를 꾸려 뒤틀린 세계를 구하세요.'}
+        {id:"1", src:"images/contents/Poster1.png", alt:'슬라이드1 배경', title:'게임소개', subtitle:'세계를 복구 시키기 위한 여정', text:'덱 빌딩, 로그라이크 RPG 크로노아크 동료들과 파티를 꾸려 뒤틀린 세계를 구하세요.'},
+        {id:"2", src:"images/contents/Poster2.jpg", alt:'슬라이드2 배경', title:'게임소개2', subtitle:'세계를 복구 시키기 위한 여정',  text:'덱 빌딩, 로그라이크 RPG 크로노아크 동료들과 파티를 꾸려 뒤틀린 세계를 구하세요.'},
+        {id:"3", src:"images/contents/Poster3.png", alt:'슬라이드3 배경', title:'게임소개3', subtitle:'세계를 복구 시키기 위한 여정',  text:'덱 빌딩, 로그라이크 RPG 크로노아크 동료들과 파티를 꾸려 뒤틀린 세계를 구하세요.'},
+        {id:"4", src:"images/contents/Poster4.jpg", alt:'슬라이드4 배경', title:'게임소개4', subtitle:'세계를 복구 시키기 위한 여정',  text:'덱 빌딩, 로그라이크 RPG 크로노아크 동료들과 파티를 꾸려 뒤틀린 세계를 구하세요.'}
     ]
 
     return(
