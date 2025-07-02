@@ -134,8 +134,8 @@ section{background: #1E293B; width: 100vw; padding-top: 100px;}
     #main_header > .inner_container > .main_navbar{margin-right: auto; margin-left: 50px;}
     #main_header > .inner_container > .toggle_btn{display: none;} 
 
-    .main_banner{padding-top: 60px;}
-    .main_banner > .banner_wrap{max-width: 1320px; margin: 0 auto;}
+    .main_banner{padding-top: 60px;  overflow: hidden;}
+    .main_banner > .banner_wrap{max-width: 1320px; margin: 0 auto;  z-index: 2;}
     .main_banner > .banner_wrap > img{margin: 0 auto; width: 70%;}
     .main_banner > .banner_wrap > .banner_icons {display: none;}
     

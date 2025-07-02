@@ -21,6 +21,7 @@
     "react-router-dom": "^7.6.1",
     "react-scripts": "5.0.1",
     "react-tabs": "^6.1.0",
+    "sakura-js": "^1.1.1",
     "swiper": "^11.2.8",
     "web-vitals": "^2.1.4"
   },

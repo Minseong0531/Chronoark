@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import "./sakura.css";
 import Header from './component/Header';
 import MainBanner from './component/MainBanner';
 import Home from './page/Home';
-
 function App() {
   
   return(
