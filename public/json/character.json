@@ -3,9 +3,8 @@
       "id": "1",
       "name": "일리야",
       "type": "images/icon/attacker.png",
-      "stainding": "images/Character/Ilya_icon_thumb.png",
       "keyword": "서리, 납도",
-      "thumb": "images/icon/Ilya_icon_thumb.png",
+      "thumb": "images/icon/ilya_icon_thumb.png",
       "color": "#7ECEFF",
       "view": [
         "images/Character/Ilya.png",
@@ -31,7 +30,7 @@
       "name": "모모리",
       "type": "images/icon/tanker.png",
       "keyword": "피해 저장, 도발 제어",
-      "thumb": "images/icon/Momori_icon_thumb.png",
+      "thumb": "images/icon/momori_icon_thumb.png",
       "color": "#7ECEFF",
       "view": [
         "images/Character/Momori.png",
@@ -58,7 +57,7 @@
       "name": "조이",
       "type": "images/icon/suporter.png",
       "keyword": "중독, 지속 회복",
-      "thumb": "images/icon/Joy_icon_thumb.png",
+      "thumb": "images/icon/joy_icon_thumb.png",
       "color": "#7ECEFF",
       "view": [
         "images/Character/Joy.png",
@@ -85,7 +84,7 @@
       "name": "헬리아",
       "type": "images/icon/attacker.png",
       "keyword": "태양 불꽃, 덱 컨트롤",
-      "thumb": "images/icon/Helia_icon_thumb.png",
+      "thumb": "images/icon/helia_icon_thumb.png",
       "color": "#7ECEFF",
       "view": [
         "images/Character/Helia.png",
@@ -111,7 +110,7 @@
       "name": "셀레나",
       "type": "images/icon/suporter.png",
       "keyword": "달의 장막, 덱 컨트롤",
-      "thumb": "images/icon/Selena_icon_thumb.png",
+      "thumb": "images/icon/selena_icon_thumb.png",
       "color": "#7ECEFF",
       "view": [
         "images/Character/Selena.png",
