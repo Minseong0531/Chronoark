@@ -23,14 +23,6 @@ function CharacterCard(){
         fetchCharacter();
     },[])
 
-    // 경로 앞에 PUBLIC_URL 붙이는 함수
-    const fixPath = (path) => {
-        if(!path) return "";
-        // 이미 https:// 로 시작하는 외부 URL인 경우는 그대로 리턴
-        if(path.startsWith('http')) return path;
-        // 없으면 / 붙여서 PUBLIC_URL 붙임
-        return `${process.env.PUBLIC_URL}/${path.replace(/^\/+/, '')}`;
-    }
 
     return(
         <section id='character-card'>

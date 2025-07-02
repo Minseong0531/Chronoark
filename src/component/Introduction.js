@@ -36,7 +36,7 @@ function Introduction(){
                                 pointerEvents: 'none'
                             }} />
                             <div className="bg-wrap" style={{maxHeight:'1080px', overflow:'hidden', width:'100%', height:'960px'}}>
-                                <img src={content.src} alt={content.alt} style={{width:'100%', height:'100%', objectFit:'cover', objectPosition:'center', maxHeight:'1080px'}}/>
+                                <img src={fixPath(content.src)} alt={content.alt} style={{width:'100%', height:'100%', objectFit:'cover', objectPosition:'center', maxHeight:'1080px'}}/>
                             </div>
                             <div className="title" style={{position:'absolute', top:'0', color:'#fff',zIndex: 2, fontSize:'2.25rem', left:'50%', transform:'translateX(-50%)', fontWeight:'700'}}> 
                                 {content.title}

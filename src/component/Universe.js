@@ -46,7 +46,7 @@ function Universe(){
           >
             {enemyItem.map((enemy, idx) => (
               <motion.div key={idx} variants={item} className={enemy.alt} style={{zIndex:`${enemy.id}`}}>
-                <img src={enemy.src} alt={enemy.alt}/>
+                <img src={fixPath(enemy.src)} alt={enemy.alt}/>
               </motion.div>
             ))}
           </motion.div>

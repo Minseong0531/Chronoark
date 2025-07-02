@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { fixPath } from "../utils/PathUtils";
 
 const dlcItem = [
-    {src:'/images/contents/High_Roller.jpg', alt:'High_Roller'},
-    {src:'/images/contents/Summer_Twilight.jpg', alt:'Summer_Twilight'}
+    {src:'images/contents/High_Roller.jpg', alt:'High_Roller'},
+    {src:'images/contents/Summer_Twilight.jpg', alt:'Summer_Twilight'}
 ]
 
 function Intro(){
@@ -15,12 +16,12 @@ function Intro(){
                 {/* <iframe width="330" height="190" src="https://www.youtube.com/embed/VcpFkwBUkIU?si=COmoyCd7wzaD5dhO" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> */}
                 <div className="intro-contents">
                     <div className="first-item">
-                        <img src="/images/contents/Officail_release.png" />
+                        <img src={fixPath('images/contents/Officail_release.png')} />
                     </div>
                     <div className="dlc-item">
                         {
                             dlcItem.map((item, idx)=>(
-                                <img src={item.src} alt={item.alt} key={idx}/>
+                                <img src={fixPath(item.src)} alt={item.alt} key={idx}/>
                             ))
                         }
                     </div>
