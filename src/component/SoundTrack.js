@@ -4,6 +4,7 @@ import PauseCircle from "@mui/icons-material/PauseCircle";
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import SkipNext from "@mui/icons-material/SkipNext";
 import axios from "axios";
+import { fixPath } from "../utils/PathUtils";
 
 function SoundTrack(){
 
@@ -13,12 +14,6 @@ function SoundTrack(){
     const progressRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
-    // 경로 앞에 PUBLIC_URL 붙여주는 함수
-    const fixPath = (path) => {
-        if (!path) return "";
-        if (path.startsWith("http")) return path;
-        return `${process.env.PUBLIC_URL}/${path.replace(/^\/+/, "")}`;
-    };
 
     useEffect(()=>{
         const fetchAudio = async () => {
