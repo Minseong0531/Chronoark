@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/chronoark/static/css/main.e89f8084.css",
-    "main.js": "/chronoark/static/js/main.b4936ca5.js",
-    "static/js/453.c4b96b94.chunk.js": "/chronoark/static/js/453.c4b96b94.chunk.js",
-    "index.html": "/chronoark/index.html",
-    "main.e89f8084.css.map": "/chronoark/static/css/main.e89f8084.css.map",
-    "main.b4936ca5.js.map": "/chronoark/static/js/main.b4936ca5.js.map",
-    "453.c4b96b94.chunk.js.map": "/chronoark/static/js/453.c4b96b94.chunk.js.map"
+    "main.css": "/Chronoark/static/css/main.e89f8084.css",
+    "main.js": "/Chronoark/static/js/main.22698d48.js",
+    "static/js/453.c4b96b94.chunk.js": "/Chronoark/static/js/453.c4b96b94.chunk.js",
+    "index.html": "/Chronoark/index.html",
+    "main.e89f8084.css.map": "/Chronoark/static/css/main.e89f8084.css.map",
+    "main.22698d48.js.map": "/Chronoark/static/js/main.22698d48.js.map",
+    "453.c4b96b94.chunk.js.map": "/Chronoark/static/js/453.c4b96b94.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e89f8084.css",
-    "static/js/main.b4936ca5.js"
+    "static/js/main.22698d48.js"
   ]
 }
