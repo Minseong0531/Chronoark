@@ -1,7 +1,10 @@
 import {Link} from 'react-router-dom'
 import { fixPath } from '../utils/PathUtils'
+import { useRef, useState } from 'react';
 
-function Header(){
+function Header({isOpen, toggleModal}){
+
+
     return(
         <header id="main_header">
             <div className='inner_container'>
@@ -22,7 +25,12 @@ function Header(){
                         <li><Link to="https://store.steampowered.com/app/1188930/_/">Youtube</Link></li>
                     </ul>
                 </nav>
-                <button type="button" className="toggle_btn">
+                <button className={`toggle_btn ${isOpen ? 'open':''}`} 
+                        onClick={()=>{toggleModal();}}
+                        aria-expanded={isOpen}
+                        aria-label="메뉴 토글"
+                        type="button"
+                >
                     <span></span>
                     <span></span>
                     <span></span> 

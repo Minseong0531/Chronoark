@@ -1,8 +1,12 @@
-import React from "react"
+import { useEffect, useRef, useState } from "react"
 
-function Modal(){
+
+function Modal({isOpen, onClose, children}){
+    if (!isOpen) return null
     return(
-        <></>
+        <div id="modal-wrap">
+            {children}
+        </div>
     )
 }
 
