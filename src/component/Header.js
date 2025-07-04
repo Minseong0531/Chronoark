@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom'
 import { fixPath } from '../utils/PathUtils'
-import { useRef, useState } from 'react';
 
 function Header({isOpen, toggleModal}){
 
