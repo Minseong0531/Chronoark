@@ -15,9 +15,13 @@
   <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 </div>
 
+이 프로젝트는 비상업적 포트폴리오 용도로 제작되었으며,   
+상업적 사용 목적이 없습니다.
+
+
 ## 2025 - 07 - 04
 + 모바일 Modal창 완료
-
++ 
 ## 2025 - 07 - 02
 + Sakura.js 추가
 + css작업 완료
