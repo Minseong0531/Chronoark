@@ -4,7 +4,7 @@
       "name": "일리야",
       "type": "images/icon/attacker.png",
       "keyword": "서리, 납도",
-      "thumb": "images/icon/ilya_icon_thumb.png",
+      "thumb": "images/icon/Ilya_icon_thumb.png",
       "color": "#7ECEFF",
       "view": [
         "images/Character/Ilya.png",
@@ -30,7 +30,7 @@
       "name": "모모리",
       "type": "images/icon/tanker.png",
       "keyword": "피해 저장, 도발 제어",
-      "thumb": "images/icon/momori_icon_thumb.png",
+      "thumb": "images/icon/Momori_icon_thumb.png",
       "color": "#7ECEFF",
       "view": [
         "images/Character/Momori.png",
@@ -55,9 +55,9 @@
     {
       "id": "3",
       "name": "조이",
-      "type": "images/icon/suporter.png",
+      "type": "images/icon/supporter.png",
       "keyword": "중독, 지속 회복",
-      "thumb": "images/icon/joy_icon_thumb.png",
+      "thumb": "images/icon/Joy_icon_thumb.png",
       "color": "#7ECEFF",
       "view": [
         "images/Character/Joy.png",
@@ -84,7 +84,7 @@
       "name": "헬리아",
       "type": "images/icon/attacker.png",
       "keyword": "태양 불꽃, 덱 컨트롤",
-      "thumb": "images/icon/helia_icon_thumb.png",
+      "thumb": "images/icon/Helia_icon_thumb.png",
       "color": "#7ECEFF",
       "view": [
         "images/Character/Helia.png",
@@ -108,9 +108,9 @@
     {
       "id": "5",
       "name": "셀레나",
-      "type": "images/icon/suporter.png",
+      "type": "images/icon/supporter.png",
       "keyword": "달의 장막, 덱 컨트롤",
-      "thumb": "images/icon/selena_icon_thumb.png",
+      "thumb": "images/icon/Selena_icon_thumb.png",
       "color": "#7ECEFF",
       "view": [
         "images/Character/Selena.png",
@@ -136,7 +136,7 @@
       "name": "아자르",
       "type": "images/icon/attacker.png",
       "keyword": "환영검, 콤보, 딜러",
-      "thumb": "images/icon/azar_icon_thumb.png",
+      "thumb": "images/icon/Azar_icon_thumb.png",
       "color": "#FF6B6B",
       "view": ["images/Character/Azar.png", "images/Character/Azar_thumb.png", "AZAR"],
       "description": [
@@ -155,7 +155,7 @@
       "name": "카론",
       "type": "images/icon/attacker.png",
       "keyword": "어둠, Soul Stigma, 보조딜러",
-      "thumb": "images/icon/charon_icon_thumb.png",
+      "thumb": "images/icon/Charon_icon_thumb.png",
       "color": "#A991E2",
       "view": ["images/Character/Charon.png", "images/Character/Charon_thumb.png", "CHARON"],
       "description": [
@@ -169,7 +169,7 @@
       "name": "헤인",
       "type": "images/icon/attacker.png",
       "keyword": "학자형, 정신공격, 폭딜",
-      "thumb": "images/icon/hein_icon_thumb.png",
+      "thumb": "images/icon/Hein_icon_thumb.png",
       "color": "#FFD93D",
       "view": ["images/Character/Hein.png", "images/Character/Hein_thumb.png", "HEIN"],
       "description": [
@@ -183,7 +183,7 @@
       "name": "후즈",
       "type": "images/icon/supporter.png",
       "keyword": "자가피해 회복, 힐러",
-      "thumb": "images/icon/huz_icon_thumb.png",
+      "thumb": "images/icon/Huz_icon_thumb.png",
       "color": "#8FD3F4",
       "view": ["images/Character/Huz.png", "images/Character/Huz_thumb.png", "HUZ"],
       "description": [
@@ -197,7 +197,7 @@
       "name": "아이언하트",
       "type": "images/icon/tanker.png",
       "keyword": "방어, 보호막, 반격",
-      "thumb": "images/icon/ironheart_icon_thumb.png",
+      "thumb": "images/icon/Ironheart_icon_thumb.png",
       "color": "#B0B0B0",
       "view": ["images/Character/Ironheart.png", "images/Character/Ironheart_thumb.png", "IRONHEART"],
       "description": [
@@ -211,7 +211,7 @@
       "name": "요한",
       "type": "images/icon/supporter.png",
       "keyword": "빛, 치유, 정화",
-      "thumb": "images/icon/johan_icon_thumb.png",
+      "thumb": "images/icon/Johan_icon_thumb.png",
       "color": "#FFF2CC",
       "view": ["images/Character/Johan.png", "images/Character/Johan_thumb.png", "JOHAN"],
       "description": [
@@ -225,7 +225,7 @@
       "name": "레린",
       "type": "images/icon/supporter.png",
       "keyword": "바람, 폐기물 + 버리기 시너지",
-      "thumb": "images/icon/leryn_icon_thumb.png",
+      "thumb": "images/icon/Leryn_icon_thumb.png",
       "color": "#AED581",
       "view": ["images/Character/Leryn.png", "images/Character/Leryn_thumb.png", "LERYN"],
       "description": [
@@ -239,7 +239,7 @@
       "name": "미스체인",
       "type": "images/icon/tanker.png",
       "keyword": "속박, 도발, 피해 흡수",
-      "thumb": "images/icon/miss_chain_icon_thumb.png",
+      "thumb": "images/icon/Miss_chain_icon_thumb.png",
       "color": "#9E9D24",
       "view": ["images/Character/Miss_chain.png", "images/Character/Miss_chain_thumb.png", "MISS_CHAIN"],
       "description": [
@@ -253,7 +253,7 @@
       "name": "프레셀",
       "type": "images/icon/supporter.png",
       "keyword": "원거리 사격, 한방 회복",
-      "thumb": "images/icon/pressel_icon_thumb.png",
+      "thumb": "images/icon/Pressel_icon_thumb.png",
       "color": "#80CBC4",
       "view": ["images/Character/Pressel.png", "images/Character/Pressel_thumb.png", "PRESSEL"],
       "description": [
@@ -267,7 +267,7 @@
       "name": "실버스틴",
       "type": "images/icon/attacker.png",
       "keyword": "독, 출혈, 시간폭",
-      "thumb": "images/icon/silverstein_icon_thumb.png",
+      "thumb": "images/icon/Silverstein_icon_thumb.png",
       "color": "#7B7B7B",
       "view": ["images/Character/Silverstein.png", "images/Character/Silverstein_thumb.png", "SILVERSTEIN"],
       "description": [
@@ -281,7 +281,7 @@
       "name": "Sizz",
       "type": "images/icon/supporter.png",
       "keyword": "전기, 기절, 도트 힐러",
-      "thumb": "images/icon/sizz_icon_thumb.png",
+      "thumb": "images/icon/Sizz_icon_thumb.png",
       "color": "#4FC3F7",
       "view": ["images/Character/Sizz.png", "images/Character/Sizz_thumb.png", "SIZZ"],
       "description": [
@@ -295,7 +295,7 @@
       "name": "Trisha",
       "type": "images/icon/attacker.png",
       "keyword": "암살자, 크리티컬, 그림자",
-      "thumb": "images/icon/trisha_icon_thumb.png",
+      "thumb": "images/icon/Trisha_icon_thumb.png",
       "color": "#D81B60",
       "view": ["images/Character/Trisha.png", "images/Character/Trisha_thumb.png", "TRISHA"],
       "description": [
