@@ -133,11 +133,11 @@ section{background: #1E293B; width: 100vw; padding-top: 100px;}
   @media (min-width:769px ) {
     body{overflow-x: hidden;}
     .title{ text-align: center;}
-    #character-card > .mySwiper{
+    #character-card .mySwiper{
       overflow: hidden;
       max-height: 550px;
     }
-    .swiper-wrapper{
+    #character-card .swiper-wrapper{
       flex-direction: column;
       
     }
