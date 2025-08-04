@@ -1,3 +1,4 @@
+import { Link as ScrollLink } from 'react-scroll';
 import {Link} from 'react-router-dom'
 import { fixPath } from '../utils/PathUtils'
 
@@ -10,11 +11,11 @@ function Header({isOpen, toggleModal}){
                 <h1><Link to="/"><img src={fixPath('images/Logo/Alfine_Logo_White.png')}></img></Link></h1>
                 <nav className='main_navbar'>
                     <ul>
-                        <li><Link to="/main">메인</Link></li>
-                        <li><Link to="/universe">세계관</Link></li>
-                        <li><Link to="/charactor">캐릭터</Link></li>
-                        <li><Link to="/guide">게임소개</Link></li>
-                        <li><Link to="/soundtrack">사운드트랙</Link></li>
+                        <li><ScrollLink to="intro" smooth={true} duration={500}>메인</ScrollLink></li>
+                        <li><ScrollLink to="universe" smooth={true} duration={500}>세계관</ScrollLink></li>
+                        <li><ScrollLink to="character-card" smooth={true} duration={500}>캐릭터</ScrollLink></li>
+                        <li><ScrollLink to="introduction" smooth={true} duration={500}>게임소개</ScrollLink></li>
+                        <li><ScrollLink to="sound-content" smooth={true} duration={500}>사운드트랙</ScrollLink></li>
                     </ul>
                 </nav>
                 <nav className='main_icons'>

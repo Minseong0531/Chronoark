@@ -1,15 +1,25 @@
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Tabs, Tab, TabList, TabPanel} from 'react-tabs';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { fixPath } from "../utils/PathUtils";
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+
 
 function CharacterCard(){
     const [characterData, setCharacterData] = useState([]);
+    const [tabIndex, setTabIndex] = useState(0);
+    const swiperRef = useRef(null);
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
     
+    useEffect(() => {
+        const handleResize = () => {
+          setIsDesktop(window.innerWidth >= 768);
+        }
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
+
+
     useEffect(()=>{
         const fetchCharacter = async () => {
             const characterJson = `${process.env.PUBLIC_URL}/json/character.json`;
@@ -23,6 +33,16 @@ function CharacterCard(){
         fetchCharacter();
     },[])
 
+    useEffect(() => {
+        if (swiperRef.current && swiperRef.current.activeIndex !== tabIndex) {
+          swiperRef.current.slideTo(tabIndex);
+        }
+      }, [tabIndex]);
+
+      useEffect(() => {
+        console.log('swiperRef.current', swiperRef.current)
+        console.log('tabIndex 변경:', tabIndex);
+      }, [tabIndex]);
 
     return(
         <section id='character-card'>
@@ -30,20 +50,44 @@ function CharacterCard(){
             <div className='title'>
                 <h2>캐릭터 소개</h2>
             </div>
-            <Tabs className="chr_wrap">
-                <TabList className="tabs" style={{display:"flex"}}>
-                    {
-                        characterData && characterData.length > 0 && (
-                        characterData.map((item)=>(
-                            <Tab key={item.id}>
-                                <img 
-                                    src={fixPath(item.thumb)}
-                                    alt={`${item.name} 아이콘`}
-                                />
-                            </Tab>
-                        ))
-                    )
-                    }
+            <Tabs className="chr_wrap" 
+                    selectedIndex={tabIndex} 
+                    onSelect={(index) => {
+                        setTabIndex(index);
+                        swiperRef.current?.slideTo(index);
+                      }}>
+                <TabList className="tabs">
+                    <Swiper
+                        direction={isDesktop ? 'vertical' : 'horizontal'}
+                        slidesPerView={4}
+                        spaceBetween={30}
+                        centeredSlides={true}
+                        className="mySwiper"
+                        onSlideChange={(swiper) => {
+                            if (swiper.activeIndex !== tabIndex) {
+                              setTabIndex(swiper.activeIndex);
+                            }
+                          }}
+                        onSwiper={(swiper) => {
+                            swiperRef.current = swiper;
+                            swiper.slideTo(tabIndex);
+                          }}
+                    >
+                    {characterData.map((item, index) => (
+                        <SwiperSlide 
+                            key={item.id}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setTabIndex(index);
+                                swiperRef.current?.slideTo(index);
+                              }}
+                            >
+                        <Tab>
+                            <img src={fixPath(item.thumb)} alt={`${item.name} 아이콘`} />
+                        </Tab>
+                        </SwiperSlide>
+                    ))}
+                    </Swiper>
                 </TabList>
                 {
                     characterData.map((item)=>(

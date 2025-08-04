@@ -130,5 +130,179 @@
         "images/skill/Selena/Selena_05.png",
         "images/skill/Selena/Selena_06.png"
       ]
+    },
+    {
+      "id": "6",
+      "name": "아자르",
+      "type": "images/icon/attacker.png",
+      "keyword": "환영검, 콤보, 딜러",
+      "thumb": "images/icon/azar_icon_thumb.png",
+      "color": "#FF6B6B",
+      "view": ["images/Character/Azar.png", "images/Character/Azar_thumb.png", "AZAR"],
+      "description": [
+        "정제된 태도로 어떤 상황에도 능숙하게 대응하는 팀 리더격 공격수.",
+        "매 턴 환영검 버프를 통해 연쇄 공격을 생성하고 0코스트 공격 스킬을 만들어내는 콤보형 플레이."
+  
+      ],
+      "skill": [
+        "images/skill/Azar/Azar_01.png",
+        "...",
+        "images/skill/Azar/Azar_06.png"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "카론",
+      "type": "images/icon/attacker.png",
+      "keyword": "어둠, Soul Stigma, 보조딜러",
+      "thumb": "images/icon/charon_icon_thumb.png",
+      "color": "#A991E2",
+      "view": ["images/Character/Charon.png", "images/Character/Charon_thumb.png", "CHARON"],
+      "description": [
+        "죽음과 어둠을 다루며 Soul Stigma 디버프를 적용해 적의 체력을 잠식합니다.",
+        "패시브로 Soul Stigma 대상에게 추가 대미지를 주는 유틸형 공격수."
+      ],
+      "skill": ["images/skill/Charon/Charon_01.png", "...", "images/skill/Charon_06.png"]
+    },
+    {
+      "id": "8",
+      "name": "헤인",
+      "type": "images/icon/attacker.png",
+      "keyword": "학자형, 정신공격, 폭딜",
+      "thumb": "images/icon/hein_icon_thumb.png",
+      "color": "#FFD93D",
+      "view": ["images/Character/Hein.png", "images/Character/Hein_thumb.png", "HEIN"],
+      "description": [
+        "학자형 공격수로, 디버프 확산 및 정신속성 공격에 특화.",
+        "빠른 스킬 사용으로 광역 폭딜을 기대할 수 있는 딜러."
+      ],
+      "skill": ["images/skill/Hein/Hein_01.png", "...", "images/skill/Hein_06.png"]
+    },
+    {
+      "id": "9",
+      "name": "후즈",
+      "type": "images/icon/supporter.png",
+      "keyword": "자가피해 회복, 힐러",
+      "thumb": "images/icon/huz_icon_thumb.png",
+      "color": "#8FD3F4",
+      "view": ["images/Character/Huz.png", "images/Character/Huz_thumb.png", "HUZ"],
+      "description": [
+        "자가 피해를 유도하고, 그 피해를 회복으로 전환하는 셀프‑힐 중심 힐러.",
+        "치명적인 힐 링킹을 통한 강력한 유지력과 유틸성 보유."
+      ],
+      "skill": ["images/skill/Huz/Huz_01.png", "...", "images/skill/Huz_06.png"]
+    },
+    {
+      "id": "10",
+      "name": "아이언하트",
+      "type": "images/icon/tanker.png",
+      "keyword": "방어, 보호막, 반격",
+      "thumb": "images/icon/ironheart_icon_thumb.png",
+      "color": "#B0B0B0",
+      "view": ["images/Character/Ironheart.png", "images/Character/Ironheart_thumb.png", "IRONHEART"],
+      "description": [
+        "용병 단체의 리더로, 전투에서 파티 전체를 보호하는 탱커형 캐릭터.",
+        "과잉 치유량의 66%를 방어막으로 전환하는 패시브 'Overbarrier'."
+      ],
+      "skill": ["images/skill/Ironheart/Ironheart_01.png", "...", "images/skill/Ironheart_06.png"]
+    },
+    {
+      "id": "11",
+      "name": "요한",
+      "type": "images/icon/supporter.png",
+      "keyword": "빛, 치유, 정화",
+      "thumb": "images/icon/johan_icon_thumb.png",
+      "color": "#FFF2CC",
+      "view": ["images/Character/Johan.png", "images/Character/Johan_thumb.png", "JOHAN"],
+      "description": [
+        "신앙적인 이미지로, 빛속성 치유와 상태 이상 정화에 능한 힐러.",
+        "연속 회복과 유틸 스킬을 통해 파티 안정성을 높입니다."
+      ],
+      "skill": ["images/skill/Johan/Johan_01.png", "...", "images/skill/Johan_06.png"]
+    },
+    {
+      "id": "12",
+      "name": "레린",
+      "type": "images/icon/supporter.png",
+      "keyword": "바람, 폐기물 + 버리기 시너지",
+      "thumb": "images/icon/leryn_icon_thumb.png",
+      "color": "#AED581",
+      "view": ["images/Character/Leryn.png", "images/Character/Leryn_thumb.png", "LERYN"],
+      "description": [
+        "버리기(Discard) 시너지 중심 바람형 지원가.",
+        "Ironheart, Ilya 등과 함께 Barrier 및 Mobius Strip 무한 시너지 형성."
+      ],
+      "skill": ["images/skill/Leryn/Leryn_01.png", "...", "images/skill/Leryn/Leryn_06.png"]
+    },
+    {
+      "id": "13",
+      "name": "미스체인",
+      "type": "images/icon/tanker.png",
+      "keyword": "속박, 도발, 피해 흡수",
+      "thumb": "images/icon/miss_chain_icon_thumb.png",
+      "color": "#9E9D24",
+      "view": ["images/Character/Miss_chain.png", "images/Character/Miss_chain_thumb.png", "MISS_CHAIN"],
+      "description": [
+        "속박 및 도발로 적의 타겟을 유도하고, 피해를 흡수하여 반격하는 탱커.",
+        "치유가 거의 필요 없는 높은 내구성을 자랑합니다."
+      ],
+      "skill": ["images/skill/Miss_chain/Miss_chain_01.png", "...", "images/skill/Miss_chain_06.png"]
+    },
+    {
+      "id": "14",
+      "name": "프레셀",
+      "type": "images/icon/supporter.png",
+      "keyword": "원거리 사격, 한방 회복",
+      "thumb": "images/icon/pressel_icon_thumb.png",
+      "color": "#80CBC4",
+      "view": ["images/Character/Pressel.png", "images/Character/Pressel_thumb.png", "PRESSEL"],
+      "description": [
+        "장거리 사격 치료 및 회복 중심 지원가.",
+        "예술 공예를 좋아하며, Black Tea 및 Art Supplies 선호."
+      ],
+      "skill": ["images/skill/Pressel/Pressel_01.png", "...", "images/skill/Pressel_06.png"]
+    },
+    {
+      "id": "15",
+      "name": "실버스틴",
+      "type": "images/icon/attacker.png",
+      "keyword": "독, 출혈, 시간폭",
+      "thumb": "images/icon/silverstein_icon_thumb.png",
+      "color": "#7B7B7B",
+      "view": ["images/Character/Silverstein.png", "images/Character/Silverstein_thumb.png", "SILVERSTEIN"],
+      "description": [
+        "독과 출혈 스킬로 전투 전반에 걸쳐 지속 피해를 입히는 딜러.",
+        "시간 누적 피해 체계에 특화된 전략형 공격수."
+      ],
+      "skill": ["images/skill/Silvberstein/Silvberstein_01.png", "...", "images/skill/Silvberstein_06.png"]
+    },
+    {
+      "id": "16",
+      "name": "Sizz",
+      "type": "images/icon/supporter.png",
+      "keyword": "전기, 기절, 도트 힐러",
+      "thumb": "images/icon/sizz_icon_thumb.png",
+      "color": "#4FC3F7",
+      "view": ["images/Character/Sizz.png", "images/Character/Sizz_thumb.png", "SIZZ"],
+      "description": [
+        "전기속성을 이용한 도트 힐과 기절 디버프 제공형 지원가.",
+        "Eve 기반 회복과 데미지 증폭을 활용한 플레이 스타일." 
+      ],
+      "skill": ["images/skill/Sizz/Sizz_01.png", "...", "images/skill/Sizz_06.png"]
+    },
+    {
+      "id": "17",
+      "name": "Trisha",
+      "type": "images/icon/attacker.png",
+      "keyword": "암살자, 크리티컬, 그림자",
+      "thumb": "images/icon/trisha_icon_thumb.png",
+      "color": "#D81B60",
+      "view": ["images/Character/Trisha.png", "images/Character/Trisha_thumb.png", "TRISHA"],
+      "description": [
+        "그림자로 이동하며 목표를 제거하는 치명타 암살자.",
+        "Shadow Slash와 치명 확률 버프를 활용한 단일 대상 폭발형 딜."
+      ],
+      "skill": ["images/skill/Trisha/Trisha_01.png", "...", "images/skill/Trisha_06.png"]
     }
+    
   ]

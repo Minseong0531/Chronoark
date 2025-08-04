@@ -60,7 +60,7 @@ section{background: #1E293B; width: 100vw; padding-top: 100px;}
 .death{width: 100%; top: -50px}
 .death>img{width: 100%; max-height: 100% !important; max-width: 70% !important; margin: 0 auto;} 
 
-#character-card{max-height: 760px; position: relative;}
+#character-card{max-height: 860px; position: relative; overflow: hidden;}
 #character-card > .chr_wrap {position: relative; width: 100vw;}
 #black-bg {position:absolute; width: 100vw; height: 100vh; background: #000; opacity: 0.5; z-index: 2;}
 
@@ -133,6 +133,14 @@ section{background: #1E293B; width: 100vw; padding-top: 100px;}
   @media (min-width:769px ) {
     body{overflow-x: hidden;}
     .title{ text-align: center;}
+    .mySwiper{
+      overflow: hidden;
+      max-height: 550px;
+    }
+    .swiper-wrapper{
+      flex-direction: column;
+      
+    }
 
 
     #main_header{  width:100%;  height:60px; line-height: 0px;}
@@ -175,9 +183,9 @@ section{background: #1E293B; width: 100vw; padding-top: 100px;}
     .death{width: 100%; top: -160px}
     .death>img{width: 60%; max-height: 50% !important; max-width: 100% !important; margin: 0 auto;} 
 
-    #character-card{max-height: 100vh; overflow: hidden; position: relative;}
+    #character-card{min-height: 100vh; overflow: hidden; position: relative;}
     #character-card > .title{padding: 50px 0;}
-    #character-card .chr_wrap{display: flex; align-content: center; height: 760px;}
+    #character-card .chr_wrap{display: flex; align-content: center; max-height: 760px;}
     #character-card .chr_wrap .tab-item{display: flex;  height: 100%; margin: 0 auto; position: static;}
     #character-card .chr_wrap .tab-item > .chr_view {position: relative; width: 50%;}
     #character-card .chr_wrap .tab-item > .text-wrap {position: static; width: 40%;}
@@ -187,7 +195,7 @@ section{background: #1E293B; width: 100vw; padding-top: 100px;}
     #character-card .chr_wrap .text-wrap > .skill{display: flex; flex-flow: row wrap; gap: 5px;}
     #character-card .chr_wrap .text-wrap > .skill > img{width: 30%;}
     
-    #character-card .chr_wrap .tabs{ gap: 40px; max-height: none; position: static; flex-direction: column; align-items: center; order: 3; width: 10%; height: 100%; justify-content: flex-start;}
+    #character-card .chr_wrap .tabs{ display: flex; gap: 40px; max-height: none; position: static; flex-direction: column; align-items: center; order: 3; width: 10%; height: 100%; justify-content: flex-start;}
     #character-card .chr_wrap .tabs > li > img{scale: 1.25;}
     #character-card .chr_wrap .react-tabs__tab-panel--selected{width: 90%;}
 
