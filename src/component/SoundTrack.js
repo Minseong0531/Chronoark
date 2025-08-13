@@ -3,7 +3,6 @@ import PlayCircle from "@mui/icons-material/PlayCircle";
 import PauseCircle from "@mui/icons-material/PauseCircle";
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import SkipNext from "@mui/icons-material/SkipNext";
-import axios from "axios";
 import { fixPath } from "../utils/PathUtils";
 
 function SoundTrack(){
